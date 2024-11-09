@@ -49,3 +49,29 @@ else:
 # Exibição da lista atualizada de frutas
 print("\nLista atualizada de frutas:")
 print(frutas)
+
+
+# ----- Objetivo 2 -----
+
+# Programa que armazena informações de um alono,  incluindo nome, idade e nota final, utilizando um dicionário.
+# O programa slicita essas informações ao usuário e, em seguida, exibe uma mensagem formatada mostrando os dados do aluno.
+
+# --- Código ---
+
+# Dicionário que armazena informações do aluno
+aluno = {}
+
+# Solicitação ao aluno de insirção do nome 
+aluno['nome'] = input("Insira o nome do aluno: ")
+# aluno['nome'] serve para armazenar o nome do aluno na chave nome do dicionário aluno.
+
+# Solicitação ao aluno de insirção da idade
+aluno['idade'] = int(input("Insira a idade do aluno: "))
+# aluno['idade'] serve para armazenar a idade do aluno na chave idade do dicionário aluno.
+
+# Solicitação ao aluno de insirção da nota final
+aluno['nota_final'] = float(input("Insira a nota final do aluno: "))
+# aluno['nota_final'] serve para armazenar a nota final do aluno na chave nota_final do dicionário aluno.
+
+# Exibe uma mensagem formatada com os dados do aluno
+print(f"\nInformações do Aluno:\nNome: {aluno['nome']}\nIdade: {aluno['idade']}\nNota Final: {aluno['nota_final']}")
