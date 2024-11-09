@@ -58,7 +58,7 @@ print(frutas)
 
 # --- Código ---
 
-# Dicionário que armazena informações do aluno
+# Dicionário que armazena informações do aluno (as chaves {} criam um dicionário vazio)
 aluno = {}
 
 # Solicitação ao aluno de insirção do nome 
@@ -75,3 +75,46 @@ aluno['nota_final'] = float(input("Insira a nota final do aluno: "))
 
 # Exibe uma mensagem formatada com os dados do aluno
 print(f"\nInformações do Aluno:\nNome: {aluno['nome']}\nIdade: {aluno['idade']}\nNota Final: {aluno['nota_final']}")
+
+
+# ----- Objetivo 3 -----
+
+# Programa que utiliza uma lista de dicionários para armazenar informações sobre vários alunos (pelo menos três).
+# Cada dicionário contem as informações de um aluno (nome, idade, nota).
+# O programa exibe a média das notas dos alunos ao final.
+
+# --- Código ---
+
+# Lista que armazenará os dicionários com informações dos alunos (o colchete [] cria uma lista vazia)
+alunos = []
+
+# Solicita ao usuário que insira informações de 3 alunos
+for i in range(3):
+    aluno_2 = {}
+    aluno_2['nome'] = input(f"Insira o nome do aluno {i+1}: ")
+    aluno_2['idade'] = int(input(f"Insira a idade do aluno {i+1}: "))
+    aluno_2['nota'] = float(input(f"Insira a nota final do aluno {i+1}: "))
+    alunos.append(aluno_2)
+# Explicação:
+# 1. O programa utiliza um loop for para solicitar ao usuário que insira informações de 3 alunos.
+# 2. a variavel i é incrementada em 1 para exibir a ordem do aluno inserido.
+# 3. A variável aluno é um dicionário que armazena as informações do aluno.
+# 4. As informações do aluno são inseridas no dicionário aluno.
+
+# Exibição das informações de todos os alunos
+print("\nInformações dos Alunos:")
+for aluno_2 in alunos:
+    print(f"Nome: {aluno_2['nome']}, Idade: {aluno_2['idade']}, Nota Final: {aluno_2['nota']}")
+# Explicação:
+# 1. O programa utiliza um loop for para exibir as informações de todos os alunos.
+# 2. O loop percorre cada dicionário aluno na lista de alunos, imprimindo as informações de cada aluno.
+
+# Calcula a média das notas dos alunos
+soma_notas = sum(aluno_2['nota'] for aluno_2 in alunos)
+media_notas = soma_notas / len(alunos)
+# Explicação:
+# 1. A função sum() é utilizada para somar todas as notas dos alunos.
+# 2. A função len() é utilizada para obter o número total de alunos na lista.
+
+# Exibe a média das notas dos alunos
+print(f"\nMédia das notas dos alunos: {media_notas:.2f}")
